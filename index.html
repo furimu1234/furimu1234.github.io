@@ -1,56 +1,340 @@
 <html>
   <head>
-    <style>
-      li {
-display: inline;
-}
-    </style>
-    <head>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 
-<body>
+    <title>HTMLとCSSの関係性</title>
+    <meta charset="UTF-8">
+  </head>
 
-<div class="keiei">
+  <body>
 
-<h1>経営管理システム</h1>
 
-  <p>管理を効率よく！</p>
 
-<ul>
-  <li>企業活動</li>
-  <li>顧客</li>
-  <li>製品やサービスの品質</li>
-</ul>
+    <div class="midasi">
+      
+      <div class="whatisclass">
+        <h1>クラスとは</h1>
+        
+        <p>同じタグを複数使いcssを適応させようとすると本当は適応させたくない所まで、適応してしまいます。<br>
+          しかし、classを指定する事により、適応させたい所だけ適応出来るようになります。<br>
+          複数のタグに同じクラスを指定するとcssで書式設定をしたら、そのクラス全てに適応されてしまいます。   
+        </p>
+
+        <hr>
+
+        例:)
+        <h1>CSSって難しいよね。</h1>
+        <h2>htmlはタグだけで囲むから楽。</h2>
+        <h3>javascriptはhtmlとcssの関係性を多少でも理解しないとかなりきつくなる。動きを付けるからねぇ。</h3>
+        <h4>PHPは何も言う事無いんよね。</h4>
+        <p>htmlのタグとかcssって覚えるの大変そうって思う人居ると思うけど、覚える必要ってあんまり無いんだよね。調べれば出てくるし</p>
+        <p>回数を重ねると何も考えなくても勝手に書けるようにはなるわよね。</p>
+        <p>PHPって世界一リファレンスが初心者に優しいのよね。でも、数字と文字をかけれるのが意味わからん。</p>
+        <p>PHPって今あまり需要無い気がするのよね。PythonとかRubyで事足りそうな気も...</p>
+
+        <p>とゆう無駄な長文があります。このプログラムを見てみましょう。</p>
+
+      
+        <p>プログラム↓</p>
+        <div class="code">
+          <code>          
+            &lt;h1&gt;CSSって難しいよね&lt;/h1&gt;<br>
+            &lt;h2&gt;>htmlはタグだけで囲むから楽。&lt;/h2&gt;<br>
+            &lt;h3&gt;javascriptはhtmlとcssの関係性を多少でも理解しないとかなりきつくなる。動きを付けるからねぇ。&lt;/h3&gt;<br>
+            &lt;h4&gt;PHPは何も言う事無いんよね。&lt;/h4&gt;<br>
+            &lt;p&gt;htmlのタグとかcssって覚えるの大変そうって思う人居ると思うけど、覚える必要ってあんまり無いんだよね。調べれば出てくるし&lt;/p&gt;<br>
+            &lt;p&gt;回数を重ねると何も考えなくても勝手に書けるようにはなるわよね。&lt;/p&gt;<br>
+            &lt;p&gt;PHPって世界一リファレンスが初心者に優しいのよね。でも、数字と文字をかけれるのが意味わからん。&lt;/p&gt;<br>
+            &lt;p&gt;PHPって今あまり需要無い気がするのよね。PythonとかRubyで事足りそうな気も...&lt;/p&gt;<br>
+          </code>
+        </div>
+
+        <hr>
+
+        <p>この&lt;p&gt;&lt;/p&gt;で囲まれた文章の背景をそれぞれで色を変えてみましょう。単純にやると</p>
+
+        例:)
+        <h1>CSSって難しいよね。</h1>
+        <h2>htmlはタグだけで囲むから楽。</h2>
+        <h3>javascriptはhtmlとcssの関係性を多少でも理解しないとかなりきつくなる。動きを付けるからねぇ。</h3>
+        <h4>PHPは何も言う事無いんよね。</h4>
+        <p class="pdesc">htmlのタグとかcssって覚えるの大変そうって思う人居ると思うけど、覚える必要ってあんまり無いんだよね。調べれば出てくるし</p>
+        <p class="pdesc">回数を重ねると何も考えなくても勝手に書けるようにはなるわよね。</p>
+        <p class="pdesc">PHPって世界一リファレンスが初心者に優しいのよね。でも、数字と文字をかけれるのが意味わからん。</p>
+        <p class="pdesc">PHPって今あまり需要無い気がするのよね。PythonとかRubyで事足りそうな気も...</p>
+
+        <p>プログラム↓</p>
+        <div class="code">
+          <code>
+            <span class="filename">index.html</span><br>
+            &lt;h1&gt;CSSって難しいよね&lt;/h1&gt;<br>
+            &lt;h2&gt;>htmlはタグだけで囲むから楽。&lt;/h2&gt;<br>
+            &lt;h3&gt;javascriptはhtmlとcssの関係性を多少でも理解しないとかなりきつくなる。動きを付けるからねぇ。&lt;/h3&gt;<br>
+            &lt;h4&gt;PHPは何も言う事無いんよね。&lt;/h4&gt;<br>
+            &lt;p&gt;htmlのタグとかcssって覚えるの大変そうって思う人居ると思うけど、覚える必要ってあんまり無いんだよね。調べれば出てくるし&lt;/p&gt;<br>
+            &lt;p&gt;回数を重ねると何も考えなくても勝手に書けるようにはなるわよね。&lt;/p&gt;<br>
+            &lt;p&gt;PHPって世界一リファレンスが初心者に優しいのよね。でも、数字と文字をかけれるのが意味わからん。&lt;/p&gt;<br>
+            &lt;p&gt;PHPって今あまり需要無い気がするのよね。PythonとかRubyで事足りそうな気も...&lt;/p&gt;<br>
+          </code>
+            <br><br>
+            <code>         
+            <span class="filename">index.css</span><br>
+            p {<br>
+              color: aqua;<br>
+            }
+          </code>
+        </div>
+
+        <hr>
+
+        <p>これにclassを指定してみましょう。</p>
+
+        例:)
+        <h1>CSSって難しいよね。</h1>
+        <h2>htmlはタグだけで囲むから楽。</h2>
+        <h3>javascriptはhtmlとcssの関係性を多少でも理解しないとかなりきつくなる。動きを付けるからねぇ。</h3>
+        <h4>PHPは何も言う事無いんよね。</h4>
+        <p class="pdesc">htmlのタグとかcssって覚えるの大変そうって思う人居ると思うけど、覚える必要ってあんまり無いんだよね。調べれば出てくるし</p>
+        <p class="pdesc">回数を重ねると何も考えなくても勝手に書けるようにはなるわよね。</p>
+        <p class="pdesc">PHPって世界一リファレンスが初心者に優しいのよね。でも、数字と文字をかけれるのが意味わからん。</p>
+        <p class="pdesc">PHPって今あまり需要無い気がするのよね。PythonとかRubyで事足りそうな気も...</p>
+
+        <p>プログラム↓</p>
+        <div class="code">
+          <code>
+            <span class="filename">index.html</span><br>
+            &lt;h1&gt;CSSって難しいよね&lt;/h1&gt;<br>
+            &lt;h2&gt;>htmlはタグだけで囲むから楽。&lt;/h2&gt;<br>
+            &lt;h3&gt;javascriptはhtmlとcssの関係性を多少でも理解しないとかなりきつくなる。動きを付けるからねぇ。&lt;/h3&gt;<br>
+            &lt;h4&gt;PHPは何も言う事無いんよね。&lt;/h4&gt;<br>
+            &lt;p class="pdesc"&gt;htmlのタグとかcssって覚えるの大変そうって思う人居ると思うけど、覚える必要ってあんまり無いんだよね。調べれば出てくるし&lt;/p&gt;<br>
+            &lt;p class="pdesc"&gt;回数を重ねると何も考えなくても勝手に書けるようにはなるわよね。&lt;/p&gt;<br>
+            &lt;p class="pdesc"&gt;PHPって世界一リファレンスが初心者に優しいのよね。でも、数字と文字をかけれるのが意味わからん。&lt;/p&gt;<br>
+            &lt;p class="pdesc"&gt;PHPって今あまり需要無い気がするのよね。PythonとかRubyで事足りそうな気も...&lt;/p&gt;<br>
+          </code>
+            <br><br>
+            <code>         
+            <span class="filename">index.css</span><br>
+            .pdesc {<br>
+              color: aqua;<br>
+            }
+          </code>
+        </div>
+
+        <hr>
+
+        <p>このままでは指定しただけなので、何も変わりません。指定したクラスを別々の物にしてみましょう。</p>
+
+        例:)
+        <h1>CSSって難しいよね。</h1>
+        <h2>htmlはタグだけで囲むから楽。</h2>
+        <h3>javascriptはhtmlとcssの関係性を多少でも理解しないとかなりきつくなる。動きを付けるからねぇ。</h3>
+        <h4>PHPは何も言う事無いんよね。</h4>
+        <p class="pdesc1">htmlのタグとかcssって覚えるの大変そうって思う人居ると思うけど、覚える必要ってあんまり無いんだよね。調べれば出てくるし</p>
+        <p class="pdesc2">回数を重ねると何も考えなくても勝手に書けるようにはなるわよね。</p>
+        <p class="pdesc3">PHPって世界一リファレンスが初心者に優しいのよね。でも、数字と文字をかけれるのが意味わからん。</p>
+        <p class="pdesc4">PHPって今あまり需要無い気がするのよね。PythonとかRubyで事足りそうな気も...</p>
+
+        <p>プログラム↓</p>
+        <div class="code">
+          <code>
+            <span class="filename">index.html</span><br>
+            &lt;h1&gt;CSSって難しいよね&lt;/h1&gt;<br>
+            &lt;h2&gt;>htmlはタグだけで囲むから楽。&lt;/h2&gt;<br>
+            &lt;h3&gt;javascriptはhtmlとcssの関係性を多少でも理解しないとかなりきつくなる。動きを付けるからねぇ。&lt;/h3&gt;<br>
+            &lt;h4&gt;PHPは何も言う事無いんよね。&lt;/h4&gt;<br>
+            &lt;p class="pdesc1"&gt;htmlのタグとかcssって覚えるの大変そうって思う人居ると思うけど、覚える必要ってあんまり無いんだよね。調べれば出てくるし&lt;/p&gt;<br>
+            &lt;p class="pdesc2"&gt;回数を重ねると何も考えなくても勝手に書けるようにはなるわよね。&lt;/p&gt;<br>
+            &lt;p class="pdesc3"&gt;PHPって世界一リファレンスが初心者に優しいのよね。でも、数字と文字をかけれるのが意味わからん。&lt;/p&gt;<br>
+            &lt;p class="pdesc4"&gt;PHPって今あまり需要無い気がするのよね。PythonとかRubyで事足りそうな気も...&lt;/p&gt;<br>
+          </code>
+            <br><br>
+            <code>         
+            <span class="filename">index.css</span><br>
+            .pdesc1 {
+              background-color: blue;
+          }<br>
+          
+          .pdesc2 {
+              background-color: rgb(0, 174, 255);
+          }<br>
+          
+          .pdesc3 {
+              background-color: rgb(0, 255, 55);
+          }<br>
+          
+          .pdesc4{
+              background-color: rgb(208, 255, 0);
+          }<br>
+          </code>
+        </div>
+
+        <hr>
+
+        <p>classを指定するときに設定する名前は何を設定しても問題ありません。しかし、"class"という物は変えてはいけません。例を見てみましょう。</p>
+        
+
+        <p class="ninni">あいうえお</p>
+        
+        <div class="code">
+          <code>
+            <span class="filename">index.html</span><br>
+            &lt;p class="ninni"&gt;あいうえお&lt;/p&gt;<br>
+          </code>
+            <br><br>
+            <code>         
+            <span class="filename">index.css</span><br>
+            .ninni {
+              background-color: blue;
+          </code>
+        </div>
+        
+        <hr>
+
+        <p>次に"class"の部分を"kurasu"にしてみましょう。</p>
+
+        <p kurasu="ninni1">あいうえお</p>
+
+        <div class="code">
+          <code>
+            <span class="filename">index.html</span><br>
+            &lt;p kurasu="ninni1"&gt;あいうえお&lt;/p&gt;<br>
+          </code>
+            <br><br>
+            <code>         
+            <span class="filename">index.css</span><br>
+            .ninni1 {
+              background-color: chartreuse;
+          </code>
+        </div>
+
+        <hr>
+
+        <p>はい。このようになりました。これをふまえてhtmlの解説をしていきます</p>
+
+
+      </div>
+      <hr>
+
+      <a class="hl" href="#midasi" id="midasi">見出し一覧</a>
+
+      <p class="description">
+        これは見出しを決める為のタグ。文字の大きさは<span class="cssspan">css</span>で決めることも出来るが、このタグを使う事により、簡単に指定でき一目で見出しが分かる。
+      </p>
+
+      <h1>見出し1</h1>　
+
+      <h2>見出し2</h2>
+
+      <h3>見出し3</h3>
+
+      <p>プログラム↓</p>
+
+      <div class="code">
+        <code>          
+          &lt;h1&gt;これは見出し1、一番大きい文字です。 &lt;/h1&gt;<br>
+          &lt;h2&gt;これは見出し2、二番目に大きい文字です。 &lt;/h2&gt;<br>
+          &lt;h3&gt;これは見出し3、三番目に大きい文字です。 &lt;/h3&gt;
+        </code>
+      </div>
+
+      <p>見出しは<b><i>h1~h6</i></b>まであります</p>
+    </div>
+
+    <hr>
+
+    <div class="list">
+      <a class="hl" href="#list" id="list">リスト</a>
+
+      <p class="description">
+        これはリストを作成できるタグ。そのまま。何も書くことないよ
+      </p>
+
+      <ul>
+        <li>リスト内容１</li>
+        <li>リスト内容２</li>
+      </ul>
+      
+      <p>プログラム↓</p>
+      <div class="code">
+        <code>          
+          &lt;li&gt;これは一つ目のリスト。 &lt;/li&gt;<br>
+          &lt;li&gt;これは二つ目のリスト。 &lt;/li&gt;<br>
+        </code>
+      </div>
+    </div>
+
+    <p>画像の挿入のコードは割愛させていただきます(-_-;)</p>
+
+    <hr>
+
+    <div class="group">
+      <a class="hl" href="#group" id="group">グループ化</a>
+
+        <h1>見出し1</h1>　
+
+        <h2>見出し2</h2>
   
+        <h3>見出し3</h3>
 
-  <p>経営資源(<span>ヒト・モノ・カネ</span>)をまとめて管理しているものが<span class="col">ERPパッケージ</span>
-</div>
+        <p>最初の見出しと同じ物。これを<span>div</span>タグで囲むことで<span>h1 ~ h3</span>タグにまで一括で書式を設定できるようになる。</p>
 
-  <div class="bisines">
-    <h1>ビジネスシステム</h1>
-    
-    <p>ビジネスで使う！</p>
-    
-    <table border="1" align="center">
-      <tbody>
-        <tr>
-          <td>流通</td>
-          <td>物流</td>
-        </tr>
-        
-       <tr>
-          <td>金融</td>
-          <td>銀行</td>
-        </tr>
-        
-        <tr>
-          <td>POSシステム</td>
-          <td>商品の販売情報管理システム。コンビニなど</td>
-        </tr>
-        <tr>
-          <td>SFAシステム</td>
-          <td>営業活動を支援</td>
-        </tr>
-        
-        
-</body>
+        <div class="midasiother">
+        <h1>見出し1</h1>　
+
+        <h2>見出し2</h2>
+  
+        <h3>見出し3</h3>
+        </div>
+
+        <p>プログラム↓</p>
+        <div class="code">
+          <code>         
+            <span class="filename">index.html</span><br>
+            &lt;div class="content"&gt;<br>
+            &lt;h1&gt;これは見出し1、一番大きい文字です。 &lt;/h1&gt;<br>
+            &lt;h2&gt;これは見出し2、二番目に大きい文字です。 &lt;/h2&gt;<br>
+            &lt;h3&gt;これは見出し3、三番目に大きい文字です。 &lt;/h3&gt;<br>
+            &lt;/div&gt;
+          </code>
+          <br><br>
+          <code>         
+            <span class="filename">index.css</span><br>
+
+            /*これはコメント。プログラムに残したいメモを書ける。共同開発だと英語で書かれることが多い。個人開発は母国語。*/<br>
+
+            /*rgb 色の三原色　赤　緑　青の値を数字化して色を指定している。*/<br><br>
+
+            .content {<br>
+              background-color: rgb(228, 217, 217);<br>
+            }
+          </code>
+        </div>
+      </div>
+    </div>
+      <hr>
+      <div class="span">
+        <a class="hl" href="#span" id="span">span</a>
+
+        <p>文章の途中で<span class="colordescription">色</span>を変えれるよ</p>
+
+        <p>プログラム↓</p>
+        <div class="code">
+          <code>         
+            <span class="filename">index.html</span><br>
+            &lt;p&gt;文章の途中で&lt;span class="content"&gt;色&lt;/span&gt;を変えれるよ&lt;/p&gt;<br>
+          </code>
+          <br><br>
+          <code>         
+            <span class="filename">index.css</span><br>
+
+            /*普通のオレンジ色を指定しているので、アルファベットで指定している。*/<br><br>
+
+            .content {<br>
+              color: orange;<br>
+            }
+          </code>
+        </div>
+      </div>
+  </body>
 </html>
